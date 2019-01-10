@@ -18,7 +18,8 @@ class Despesa(models.Model):
     def Dias_para_vencimento(self):
         return (self.vencimento - self.data_criaçao).days
 
-
+    def __str__(self):
+        return self.tipo_despesa
 
 
 
